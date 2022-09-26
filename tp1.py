@@ -93,3 +93,50 @@ while True:
         entero = int(entero)
         pares(entero)
         break
+---------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------
+        
+def numerico():
+    valor = input('Ingresa un valor numerico: ')
+    while True:
+        if valor.isdigit():
+            return int(valor)
+            break
+        else:
+            print('El valor ingresado no es numerico')
+
+def suma(valor1, valor2):
+    return int(valor1 + valor2)
+    
+#Ejersicio 7-----------------------------------------------------------------------------------------------------------------
+def imprime_mes(mes):
+    print('El numero de mes introducido corresponde con: ', mes)
+
+meses = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Nombiembre", "Diciembre"]
+
+while True:
+    numero_mes = input('Ingresa un valor numerico positivo entre 1 y 12: ')
+    if numero_mes.isdigit():
+        numero_mes = int(numero_mes)
+        if numero_mes in range(0, 12):
+            imprime_mes(meses[numero_mes-1])
+            break
+
+#Ejersicio 8-----------------------------------------------------------------------------------------------------------------
+def valores_uno_siete():
+    valores_nums = []
+    acumulador = 0
+    for i in range(7):
+        valores_nums.append(numerico())
+        acumulador = suma(acumulador, valores_nums[i])
+    print(acumulador)
+
+valores_uno_siete()
+
+#Ejersicio 9-----------------------------------------------------------------------------------------------------------------
+def pares_2():
+    for i in range(24):
+        if i % 2 == 0:
+            print(i, end='')
+
+pares_2()        
