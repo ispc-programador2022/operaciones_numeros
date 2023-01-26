@@ -12,4 +12,3 @@ Se realizan funciones en Python que permitan obtener valores numericos.
 - Estadisticas
  - Promedio
  
- 
